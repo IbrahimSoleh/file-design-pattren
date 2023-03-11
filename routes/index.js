@@ -18,5 +18,5 @@ const upload = multer({ storage });
 
 router.use(movieRouter);
 
-router.put("movies/:id/uploads", upload.single("photo"),movieController.updateMovie)
+router.put("/movies/:id/uploads", upload.single("photo"),movieController.updateMovie)
 module.exports = router;
